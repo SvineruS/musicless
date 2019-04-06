@@ -4,7 +4,7 @@ $TOKEN = $TOKENS[array_rand($TOKENS)];
 
 if      (isset($_REQUEST['search']))   search($_REQUEST['search']);
 else if (isset($_REQUEST['download'])) download($_REQUEST['download']);
-else die("instruction for u users here");
+else die("instruction for ur users here");
 
 
 
@@ -12,8 +12,8 @@ function search($name) {
 	global $TOKEN;
 	header('Content-type: application/json');
 
-  $name = urlencode($name);
-  $href = "https://api.vk.com/method/audio.search?q=$name&count=50&sort=2&access_token=$TOKEN&v=5.78";
+  	$name = urlencode($name);
+  	$href = "https://api.vk.com/method/audio.search?q=$name&count=50&sort=2&access_token=$TOKEN&v=5.78";
   
 	$s = CURL($href);
 	$s = json_decode($s);
@@ -23,8 +23,8 @@ function search($name) {
 		exit;
 	}
   
-  $s = $s->response->items;
-  $s = json_encode($s);
+  	$s = $s->response->items;
+  	$s = json_encode($s);
 	echo $s;
 }
 
@@ -35,9 +35,9 @@ function download($url) {
 	$artist = $_REQUEST['artist'] ?? FALSE;
 	$title = $_REQUEST['title'] ?? FALSE;
 	
-  header('Content-Type: audio/mpeg');
-  header("Content-Disposition: inline; filename=svinerusmusic.mp3");
-  header("Content-Transfer-Encoding: binary");
+  	header('Content-Type: audio/mpeg');
+  	header("Content-Disposition: inline; filename=svinerusmusic.mp3");
+  	header("Content-Transfer-Encoding: binary");
 	
 	
 	if ($artist || $title)
