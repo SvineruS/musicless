@@ -43,4 +43,5 @@ only need email (or tel) and password, doesn't need revoke
  - first echo id3 tag, next get music streamly from vk (no need to wait for full download)
  - maybe captcha
  - by svinerus, used in kpi_radio_bot repo
+ - named because of awesome bitrate VK music
  - waiting for pull requests
