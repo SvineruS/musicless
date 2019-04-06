@@ -6,7 +6,7 @@ ITS REQUIRE VK.COM TOKEN!
 
 
 files:
-- **index.php** search and download method
+- **index.php** search and download methods
 - **id3.php** generate id3 tag *(for artist and title)*
 
 ## Use
@@ -40,6 +40,7 @@ only need email (or tel) and password, doesn't need revoke
 
  - user-agent and token need for search, doesn't need for download
  - id3 tags is used to set artist and title in telegram inline search 
+ - first echo id3 tag, next get music streamly from vk (no need to wait for full download)
  - maybe captcha
  - by svinerus, used in kpi_radio_bot repo
  - waiting for pull requests
